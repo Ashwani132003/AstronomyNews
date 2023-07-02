@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import requests
 import json
 from datetime import date, timedelta
+import logging
 
 current_date = date.today()
 start_date = current_date - timedelta(days=15)
@@ -9,6 +10,12 @@ start_date = current_date - timedelta(days=15)
 
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG)
+
+
 
 @app.route('/')
 def index():
