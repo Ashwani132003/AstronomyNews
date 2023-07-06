@@ -9,7 +9,8 @@ start_date = current_date - timedelta(days=15)
 
 
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__, static_url_path='', static_folder='static')
+
 
 app.config['DEBUG'] = True
 
