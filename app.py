@@ -26,7 +26,7 @@ def index():
        f'from={start_date}&'
        f'to={current_date}&'
        f'sortBy=popularity&'
-       'apiKey=ae8e6d4a75d7462e8f1e248b2e139a2c')
+       'apiKey=6d5880b2578849a2a6aa9d7691d40700')
     response = requests.get(url)
 
     if response.status_code == 200:
